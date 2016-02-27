@@ -12,7 +12,7 @@ eat_gaajar_test() ->
     #'queue.bind_ok'{}
         = amqp_channel:call(Channel, #'queue.bind'{queue = Q,
                                                    exchange = <<"carrots">>,
-                                                   routing_key = <<"#">>}),
+                                                   routing_key = <<"carrot">>}),
     timer:sleep(2000),
     case amqp_channel:call(Channel, #'basic.get'{queue = Q, no_ack = true}) of
         {'basic.get_empty', _} -> exit(did_not_receive_gaajar);

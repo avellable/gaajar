@@ -34,7 +34,7 @@ handle_cast(feed, State = #state{channel = Channel}) ->
                                     routing_key = <<"carrot">>},
     Content = #amqp_msg{props = Properties, payload = Message},
     amqp_channel:call(Channel, BasicPublish, Content),
-    timer:apply_after(1000, ?MODULE, fire, []),
+    timer:apply_after(1000, ?MODULE, feed, []),
     {noreply, State};
 
 handle_cast(_, State) ->
