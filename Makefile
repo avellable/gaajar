@@ -16,4 +16,5 @@ include erlang.mk
 # Testing.
 # --------------------------------------------------------------------
 
-# FIXME Add Unit tests
+WITH_BROKER_TEST_COMMANDS := \
+	eunit:test(gaajar_tests,[verbose])
