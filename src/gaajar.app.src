@@ -1,0 +1,8 @@
+{application, gaajar,
+ [{description, "Feed the rabbit."},
+  {vsn, ""},
+  {modules, []},
+  {registered, []},
+  {mod, {gaajar, []}},
+  {env, []},
+  {applications, [kernel, stdlib, rabbit, amqp_client]}]}.
